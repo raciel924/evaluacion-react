@@ -1,11 +1,17 @@
 import React, { useEffect } from 'react'
 
 export const Message = () => {
+
+  
     useEffect(() => {
-      console.log('aqui estoy ');
+      const handleMouseMove = () => {
+        console.log(':)');
+      }
+
+      window.addEventListener('mousemove', handleMouseMove);
     
       return () => {
-        console.log('ya me fui');
+       window.removeEventListener('mousemove', handleMouseMove);
       }
     }, []);
     
