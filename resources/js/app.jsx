@@ -6,6 +6,7 @@ import React from 'react'
 //import { MultipleCouter } from './bases/01-useState/MultipleCouter';
 //import { Form } from './bases/01-useState/Form';
 import { MultipleForm } from './bases/01-useState/MultipleForm';
+import { EffectCleunUp } from './bases/02-useEffect/EffectCleunUp';
 
-createRoot(document.getElementById('root')).render(<MultipleForm/>);
+createRoot(document.getElementById('root')).render(<EffectCleunUp/>);
 
