@@ -8,8 +8,8 @@ import React from 'react'
 import { MultipleForm } from './bases/01-useState/MultipleForm';
 import { EffectCleunUp } from './bases/02-useEffect/EffectCleunUp';
 import { ReactExample } from './ReactExample';
+import { TodoMain } from './todo/TodoMain';
 
 createRoot(document.getElementById('root')).render(
-
-<ReactExample/>);
+<TodoMain/>);
 
