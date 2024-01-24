@@ -9,7 +9,7 @@ export const TodoMain = () => {
         userId: 1,
     });
     const getData = async () => {
-        const url = "https://jsonplaceholder.typicode.com/posts";
+        const url = "https://jsonplaceholder.typicode.com/posts/";
         const response = await fetch(url);
         const data = await response.json();
         const datashort = data.slice(0, 10);
@@ -27,7 +27,8 @@ export const TodoMain = () => {
             body:JSON.stringify(request)
         }) 
         const data = await response.json();
-        console.log(data);
+        setpost((prev) => [...prev, data]);
+        console.log(post);
 
     }
     useEffect(() => {
@@ -35,6 +36,8 @@ export const TodoMain = () => {
 
         return () => {};
     }, []);
+
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         postData(form);
